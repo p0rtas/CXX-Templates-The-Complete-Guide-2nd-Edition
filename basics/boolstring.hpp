@@ -1,3 +1,5 @@
+#include <string>
+
 class BoolString {
 private:
     std::string value;

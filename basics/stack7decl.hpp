@@ -1,3 +1,5 @@
+#include <deque>
+
 template <typename T, typename Cont = std::deque<T>>
 class Stack {
 private:

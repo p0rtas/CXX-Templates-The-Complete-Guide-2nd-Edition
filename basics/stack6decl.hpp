@@ -1,3 +1,5 @@
+#include <deque>
+
 template <typename T>
 class Stack {
 private:
@@ -16,6 +18,7 @@ public:
     template <typename T2>
     Stack& operator=(Stack<T2> const&);
     // to get access to private members of \TStack<T2> for any type T2:
-    template <typename>
+    /* template <typename> */
+    template <typename T2>
     friend class Stack;
 };

@@ -16,7 +16,7 @@ int main()
          << '\n'; // prints true
     cout << is_same<T, bool_constant<false>>::value
          << '\n'; // prints true (not valid
-        // prior to C++17)
+    // prior to C++17)
 
     auto ic = is_const<MyType>(); // object of trait type
     cout << is_same<decltype(ic), is_const<int>>::value << '\n'; // true

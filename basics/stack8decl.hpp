@@ -1,3 +1,5 @@
+#include <deque>
+
 template <typename T,
     template <typename Elem> class Cont = std::deque>
 class Stack {

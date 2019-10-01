@@ -13,6 +13,7 @@ private:
 
 public:
     // generic constructor for passed initial name:
+    /* template <typename STR> */
     template <typename STR, typename = EnableIfString<STR>>
     explicit Person(STR&& n)
         : name(std::forward<STR>(n))
@@ -26,7 +27,7 @@ public:
         std::cout << "COPY-CONSTR Person '" << name << "'\n";
     }
     Person(Person&& p)
-        : name(std::move(p.name))
+        : name(std::move(p.name)) // this will be actually called for Person p3(p1) when not using enable_if.
     {
         std::cout << "MOVE-CONSTR Person '" << name << "'\n";
     }

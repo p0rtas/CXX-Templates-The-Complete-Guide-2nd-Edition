@@ -23,7 +23,7 @@ struct CustomerEq {
 struct CustomerHash {
     std::size_t operator()(Customer const& c) const
     {
-        return std::hash<std::string>()(c.getName());
+        return std::hash<std::string> {}(c.getName());
     }
 };
 
